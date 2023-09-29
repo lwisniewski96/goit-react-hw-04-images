@@ -6,12 +6,6 @@ import css from './Modal.module.css';
 const modalRoot = document.querySelector('#modal-root');
 
 const Modal = ({ onClose, children }) => {
-  const handleKeyDown = (e) => {
-    if (e.code === 'Escape') {
-      onClose();
-    }
-  };
-
   const handleBackdropClick = (e) => {
     if (e.target === e.currentTarget) {
       onClose();
